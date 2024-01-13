@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    // Fontes
+    --work-sans: 'Work Sans', sans-serif;
+    --inter: 'Inter', sans-serif;
+
+    // Cores
+    --black: #000000;
+    --light: #ffffff;
+    --dark: #181A2A;
+    --cinza1: #f4f4f5;
+    --azul1: #242535;
+    --cinza2: #a1a1aa;
+    --cinza3: #52525b;
+}
+
+// Fontes
+$work: var(--work-sans);
+$inter: var(--inter);
+
+// Cores
+$black: var(--black);
+$light: var(--light);
+$dark: var(--dark);
+$cinza1: var(--cinza1);
+$cinza2: var(--cinza2);
+$cinza3: var(--cinza3);
+$azul1: var(--azul1);
