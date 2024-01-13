@@ -1,3 +1,4 @@
+import PostGridCard from './PostGridCard';
 import estilo from './UltimasPostagens.module.scss';
 
 export default function UltimasPostagens(){
@@ -7,7 +8,16 @@ export default function UltimasPostagens(){
                 <div>
                     <h1>Últimas postagens</h1>
                 </div>
-                <div></div>
+                <div>
+                    <PostGridCard/>
+                    <PostGridCard/>
+                    <PostGridCard/>
+                    <PostGridCard/>
+                    <PostGridCard/>
+                    <PostGridCard/>
+                    <PostGridCard/>
+                    <PostGridCard/>
+                </div>
                 <div>
                     <button>Ver mais</button>
                 </div>

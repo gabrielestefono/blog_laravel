@@ -19,13 +19,18 @@
             font-family: $work;
         }
 
-        > div:nth-child(2){}
+        > div:nth-child(2){
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
 
         > div:last-child{
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 2rem;
 
             > button{
                 background-color: transparent;
