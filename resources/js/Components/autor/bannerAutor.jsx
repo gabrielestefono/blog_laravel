@@ -1,8 +1,8 @@
 import estilo from './BannerAutor.module.scss';
 
-export default function BannerAutor() {
+export default function BannerAutor({light}) {
     return (
-        <div className={estilo.bannerAutorLight}>
+        <div className={light ? estilo.bannerAutorLight : estilo.bannerAutorDark}>
             <div>
                 <div>
                     <div>
