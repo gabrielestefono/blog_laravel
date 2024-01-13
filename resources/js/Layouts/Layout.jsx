@@ -10,9 +10,13 @@ export function Layout({ children }) {
         children: PropTypes.node.isRequired,
     };
 
-    const [light, setLight] = useState(true);
+    const [light, setLight] = useState(()=>{
+        const savedTheme = localStorage.getItem('theme');
+        return savedTheme ? savedTheme === 'light' : true;
+    });
 
     useEffect(() => {
+        localStorage.setItem('theme', light ? 'light' : 'dark');
         if(!light){
             document.body.classList.add('dark');
         }else{
