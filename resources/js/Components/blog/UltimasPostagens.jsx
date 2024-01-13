@@ -2,6 +2,7 @@ import PostGridCard from './PostGridCard';
 import estilo from './UltimasPostagens.module.scss';
 
 export default function UltimasPostagens({light}){
+    const currentPath = window.location.pathname;
     return (
         <section className={light ? estilo.ultimasPostagensLight : estilo.ultimasPostagensDark}>
             <div>
@@ -19,7 +20,7 @@ export default function UltimasPostagens({light}){
                     <PostGridCard light={light}/>
                 </div>
                 <div>
-                    <button>Ver mais</button>
+                    {currentPath !== "/" ? <a href="/rotaRequisiçãoMais"><button>Ver Mais</button></a> : <a href="/blog"><button>Ver Todos</button></a>}
                 </div>
             </div>
         </section>

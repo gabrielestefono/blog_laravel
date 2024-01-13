@@ -11,7 +11,7 @@ export default function PostGridCard({light}) {
                     <h3>Technology</h3>
                 </div>
                 <div>
-                    <h2>The Impact of Technology on the Workplace: How Technology is Changing</h2>
+                    <a href="/post"><h2>The Impact of Technology on the Workplace: How Technology is Changing</h2></a>
                 </div>
                 <div>
                     <div>

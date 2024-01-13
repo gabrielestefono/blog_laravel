@@ -1,6 +1,6 @@
 import estilo from './BannerBlog.module.scss';
 
-export default function BannerBlog(props) {
+export default function BannerBlog() {
     return (
         <div className={estilo.BannerBlogLight}>
             <div>

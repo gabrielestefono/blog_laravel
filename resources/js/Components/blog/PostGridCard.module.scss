@@ -41,12 +41,16 @@
         }
 
         > div:nth-child(3){
-            > h2{
-                font-size: 1.5rem;
-                font-weight: 600;
-                font-family: $work;
-                line-height: 1.75rem;
-                color: $dark;
+            > a{
+                text-decoration: none;
+
+                > h2{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    font-family: $work;
+                    line-height: 1.75rem;
+                    color: $dark;
+                }
             }
         }
 
@@ -128,12 +132,16 @@
         }
 
         > div:nth-child(3){
-            > h2{
-                font-size: 1.5rem;
-                font-weight: 600;
-                font-family: $work;
-                line-height: 1.75rem;
-                color: $light;
+            > a{
+                text-decoration: none;
+
+                > h2{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    font-family: $work;
+                    line-height: 1.75rem;
+                    color: $light;
+                }
             }
         }
 

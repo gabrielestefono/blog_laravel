@@ -1,11 +1,11 @@
 import BannerBlog from './BannerBlog';
 import PageTitle from './PageTitle';
 
-export default function SlideShowBlog(props) {
+export default function SlideShowBlog({light}) {
     return (
         <>
-            <PageTitle/>
-            <BannerBlog/>
+            <PageTitle light={light}/>
+            <BannerBlog light={light}/>
         </>
     )
 }
