@@ -1,13 +1,11 @@
-import { useState } from 'react';
-
 import estilo from './Header.module.scss';
 
-export default function Header(){
-    const [light, setLight] = useState(true);
+import PropTypes from 'prop-types';
 
-    function lightMode(){
-        setLight(!light);
-    }
+export default function Header({lightMode, light}){
+    Header.propTypes = {
+        light: PropTypes.bool.isRequired,
+    };
 
     return (
         <div className={light ? estilo.lightHeader : estilo.darkHeader}>

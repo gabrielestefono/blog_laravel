@@ -1,8 +1,8 @@
 import estilo from './Banner.module.scss';
 
-export default function Banner(){
+export default function Banner({light}){
     return (
-        <section className={estilo.bannerLight}>
+        <section className={light ? estilo.bannerLight : estilo.bannerDark}>
             <div>
                 <img src="./example/image.png" alt="Banner"/>
                 <div>

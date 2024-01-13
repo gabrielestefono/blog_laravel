@@ -1,22 +1,22 @@
 import PostGridCard from './PostGridCard';
 import estilo from './UltimasPostagens.module.scss';
 
-export default function UltimasPostagens(){
+export default function UltimasPostagens({light}){
     return (
-        <section className={estilo.ultimasPostagensLight}>
+        <section className={light ? estilo.ultimasPostagensLight : estilo.ultimasPostagensDark}>
             <div>
                 <div>
                     <h1>Últimas postagens</h1>
                 </div>
                 <div>
-                    <PostGridCard/>
-                    <PostGridCard/>
-                    <PostGridCard/>
-                    <PostGridCard/>
-                    <PostGridCard/>
-                    <PostGridCard/>
-                    <PostGridCard/>
-                    <PostGridCard/>
+                    <PostGridCard light={light}/>
+                    <PostGridCard light={light}/>
+                    <PostGridCard light={light}/>
+                    <PostGridCard light={light}/>
+                    <PostGridCard light={light}/>
+                    <PostGridCard light={light}/>
+                    <PostGridCard light={light}/>
+                    <PostGridCard light={light}/>
                 </div>
                 <div>
                     <button>Ver mais</button>

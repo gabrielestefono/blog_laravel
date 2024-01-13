@@ -1,3 +1,9 @@
+@import './variaveis.scss';
+
 body{
     overflow-x: hidden;
+}
+
+.dark{
+    background-color: $dark;
 }

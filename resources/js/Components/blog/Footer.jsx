@@ -1,8 +1,8 @@
 import estilo from './Footer.module.scss';
 
-export default function Footer() {
+export default function Footer({light}) {
     return (
-        <footer className={estilo.footerLight}>
+        <footer className={light ? estilo.footerLight : estilo.footerDark}>
             <div>
                 <div>
                     <div>

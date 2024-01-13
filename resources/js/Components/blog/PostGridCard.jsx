@@ -1,8 +1,8 @@
 import estilo from './PostGridCard.module.scss';
 
-export default function PostGridCard() {
+export default function PostGridCard({light}) {
     return (
-        <div className={estilo.postGridCardLight}>
+        <div className={light ? estilo.postGridCardLight : estilo.postGridCardDark}>
             <div>
                 <div>
                     <img src="./example/postImage.png" alt="Alt imagem" />
