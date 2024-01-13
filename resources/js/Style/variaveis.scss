@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 :root{
     // Fontes
     --work-sans: 'Work Sans', sans-serif;
     --inter: 'Inter', sans-serif;
+    --plus: 'Plus Jakarta Sans', sans-serif;
 
     // Cores
     --black: #000000;
@@ -18,11 +19,15 @@
     --cinza4: #E8E8EA;
     --cinza5: #97989F;
     --cinza6: #696A75;
+    --cinza7: #F6F6F7;
+    --cinza8: #3B3C4A;
+    --cinza9: #DCDDDF;
 }
 
 // Fontes
 $work: var(--work-sans);
 $inter: var(--inter);
+$plus: var(--plus);
 
 // Cores
 $black: var(--black);
@@ -36,3 +41,6 @@ $cinza3: var(--cinza3);
 $cinza4: var(--cinza4);
 $cinza5: var(--cinza5);
 $cinza6: var(--cinza6);
+$cinza7: var(--cinza7);
+$cinza8: var(--cinza8);
+$cinza9: var(--cinza9);
