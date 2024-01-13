@@ -7,12 +7,10 @@ import SlideShowBlog from "@/Components/blogpage/SlideShowBlog";
 
 export default function Autor(){
     return (
-        <>
-            <Header/>
+        <Layout>
             <BannerAutor/>
             <UltimasPostagens/>
             <Ads/>
-            <Footer/>
-        </>
+        </Layout>
     )
 }
