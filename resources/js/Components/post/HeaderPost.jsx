@@ -1,8 +1,8 @@
 import estilo from './HeaderPost.module.scss';
 
-export default function HeaderPost(){
+export default function HeaderPost({light}){
     return (
-        <div className={estilo.HeaderPostLight}>
+        <div className={light ? estilo.HeaderPostLight : estilo.HeaderPostDark}>
             <div>
                 <div>
                     <h2>Tecnologia</h2>
