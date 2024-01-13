@@ -37,5 +37,6 @@ use Inertia\Inertia;
 
 Route::get('/', function (){return Inertia::render('Inicio');});
 Route::get('/blog', function (){return Inertia::render('Blog');});
+Route::get('/post', function (){return Inertia::render('Post');});
 
 require __DIR__.'/auth.php';
