@@ -1,0 +1,126 @@
+@import '../../Style/variaveis.scss';
+
+.bannerAutorLight{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+
+    > div{
+        width: 76rem;
+        height: 21.5rem;
+        background-color: $cinza7;
+        border-radius: .75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > div{
+            width: 41.75rem;
+            height: 15.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            > div:first-child{
+                width: 100%;
+                height: 4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                > img{
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                }
+
+                > div{
+                    > h2{
+                        font-family: $work;
+                        font-size: 1.25rem;
+                        color: $dark;
+                        line-height: 1.75rem;
+                        font-weight: 500;
+                    }
+
+                    >p{
+                        font-family: $work;
+                        font-size: .875rem;
+                        font-weight: 400;
+                        line-height: 1.25rem;
+                        color: $cinza6;
+                    }
+                }
+            }
+
+            > div:nth-child(2){
+                width: 100%;
+
+                > p{
+                    font-family: $work;
+                    font-size: 1.125rem;
+                    font-weight: 400;
+                    line-height: 1.625rem;
+                    color: $cinza8;
+                }
+            }
+
+            > div:last-child{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                gap: 0.5rem;
+
+                > button{
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: .375rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $cinza6;
+                    border: none;
+                    cursor: pointer;
+
+                    > div.item1{
+                        background-image: url(./icons/facebook.svg);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: 50%;
+                        width: .875rem;
+                        height: .875rem;
+                    }
+
+                    > div.item2{
+                        background-image: url(./icons/twitter.svg);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: 50%;
+                        width: 0.9375rem;
+                        height: 0.75rem;
+                    }
+
+                    > div.item3{
+                        background-image: url(./icons/instagram.svg);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: 50%;
+                        width: .875rem;
+                        height: .875rem;
+                    }
+
+                    > div.item4{
+                        background-image: url(./icons/youTube.svg);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: 50%;
+                        width: 1rem;
+                        height: 0.75rem;
+                    }
+                }
+            }
+        }
+    }
+}
