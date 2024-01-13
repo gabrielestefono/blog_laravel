@@ -69,3 +69,73 @@
         }
     }
 }
+
+.PageTitleDark{
+    display: flex;
+    width: 100vw;
+    height: 6.25rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        > h1{
+            font-size: 1.875rem;
+            color: $light;
+            font-family: $work;
+            font-weight: 600;
+            line-height: 2.25rem;
+        }
+
+        > ul{
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            margin-top: 0.5rem;
+
+            > li{
+                color: $cinza6;
+                font-family: $work;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 1.5rem;
+
+                &.separate{
+                    display: block;
+                    width: 1px;
+                    background-color: $cinza4;
+                    height: 1rem;
+                }
+            }
+
+            > a{
+                color: $cinza6;
+                font-family: $work;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                text-decoration: none;
+
+                > li{
+                    color: $cinza6;
+                    font-family: $work;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+
+                    &.separate{
+                        display: block;
+                        width: 1px;
+                        background-color: $cinza4;
+                        height: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
