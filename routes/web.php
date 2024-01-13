@@ -36,5 +36,6 @@ use Inertia\Inertia;
 // });
 
 Route::get('/', function (){return Inertia::render('Inicio');});
+Route::get('/blog', function (){return Inertia::render('Blog');});
 
 require __DIR__.'/auth.php';
