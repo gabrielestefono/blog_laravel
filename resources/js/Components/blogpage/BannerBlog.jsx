@@ -25,7 +25,7 @@ export default function BannerBlog({light, post}) {
                             </div>
                             <div>
                                 <div>
-                                    <img src="./example/profile.png" alt="Perfil"/>
+                                    <img src={post.user.imagem_pequena != undefined ? `./storage/${post.user.imagem_pequena}` : "./example/profile.png"} alt="Perfil"/>
                                     <span>{post.user.name}</span>
                                 </div>
                                 <span>{format(new Date(post.data), 'dd \'de\' MMMM \'de\' yyyy', { locale: ptBR })}</span>
