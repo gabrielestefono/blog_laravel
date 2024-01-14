@@ -1,6 +1,7 @@
 import estilo from './Banner.module.scss';
 import PropTypes from 'prop-types';
-
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 
 export default function Banner({light, post}){
     Banner.propTypes = {
@@ -13,7 +14,7 @@ export default function Banner({light, post}){
         return (
             <section className={light ? estilo.bannerLight : estilo.bannerDark}>
                 <div>
-                    <img src={post.imagem_destaque != undefined ? `./storage/${post.imagem_destaque}` : ''} alt="Banner"/>
+                    <img src={`./storage/${post.imagem_destaque}`} alt="Banner"/>
                     <div>
                         <div>
                             <div>
@@ -27,7 +28,7 @@ export default function Banner({light, post}){
                                     <img src={post.user.imagem_pequena ?? "./example/profile.png"} alt="Perfil"/>
                                     <span>{post.user.name}</span>
                                 </div>
-                                <span>{post.data}</span>
+                                <span>{format(new Date(post.data), 'dd \'de\' MMMM \'de\' yyyy', { locale: ptBR })}</span>
                             </div>
                         </div>
                     </div>

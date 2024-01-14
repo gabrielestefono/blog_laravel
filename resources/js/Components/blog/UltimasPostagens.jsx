@@ -11,7 +11,7 @@ export default function UltimasPostagens({light, posts}){
 
     let postsProntos = (posts)=>{
         return posts.map((post, index) => {
-            if(currentPath !== '/autor'){
+            if(currentPath !== '/sobre'){
                 if(index !== 0){
                     return (
                         <PostGridCard key={post.id} post={post} light={light}/>

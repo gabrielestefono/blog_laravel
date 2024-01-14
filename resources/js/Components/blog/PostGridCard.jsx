@@ -1,6 +1,13 @@
 import estilo from './PostGridCard.module.scss';
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+import propTypes from 'prop-types';
 
 export default function PostGridCard({light, post}) {
+    PostGridCard.propTypes = {
+        light: propTypes.bool.isRequired,
+        post: propTypes.object.isRequired
+    }
     return (
         <div className={light ? estilo.postGridCardLight : estilo.postGridCardDark}>
             <div>
@@ -18,7 +25,7 @@ export default function PostGridCard({light, post}) {
                         <img src="./example/profile.png" alt="Alt imagem" />
                         <span>{post.user.name}</span>
                     </div>
-                    <span>{post.data}</span>
+                    <span>{format(new Date(post.data), 'dd \'de\' MMMM \'de\' yyyy', { locale: ptBR })}</span>
                 </div>
             </div>
         </div>
