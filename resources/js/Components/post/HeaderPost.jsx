@@ -12,7 +12,7 @@ export default function HeaderPost({light, post}){
         <div className={light ? estilo.HeaderPostLight : estilo.HeaderPostDark}>
             <div>
                 <div>
-                    <h2>{post.categoria}</h2>
+                    <h2>{post.categoria.nome}</h2>
                 </div>
                 <div>
                     <p>{post.titulo}</p>
