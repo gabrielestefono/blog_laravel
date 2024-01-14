@@ -7,7 +7,7 @@ export default function Content({light, post}){
         light: propTypes.bool
     };
     return (
-        <div className={light ? estilo.light : estilo.contentDark}>
+        <div className={light ? estilo.contentLight : estilo.contentDark}>
             <div>
                 <div dangerouslySetInnerHTML={{ __html: post.corpo }} />
             </div>
