@@ -123,12 +123,14 @@ Ao fazer o clone do repositório, com os requisitos instalados, abra o projeto n
 
 Será necessário criar um novo banco de dados no MySQL com o nome que preferir
 Deverá renomear o .env.examples para .env e ajustar os dados:
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=blog
-DB_USERNAME=root
-DB_PASSWORD=
+
+* DB_CONNECTION=mysql
+* DB_HOST=127.0.0.1
+* DB_PORT=3306
+* DB_DATABASE=blog
+* DB_USERNAME=root
+* DB_PASSWORD=
+
 Para os dados do seu banco de dados
 
 Após feito isso, precisará rodar os comandos no mesmo terminal de antes (ou um novo na mesma pasta).
