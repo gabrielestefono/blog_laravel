@@ -4,12 +4,14 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\PostResource\Pages;
 use App\Filament\Resources\PostResource\RelationManagers;
+use App\Models\Categoria;
 use App\Models\Post;
 use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -60,7 +62,8 @@ class PostResource extends Resource
                     ->directory('posts')
                     ->required()
                     ->helperText('Tamanho recomendado: 360x240'),
-                TextInput::make('categoria')
+                Select::make('categoria_id')
+                    ->relationship(name: 'categoria', titleAttribute: 'nome')
                     ->required(),
                 TextInput::make('data')
                     ->required()
@@ -79,7 +82,6 @@ class PostResource extends Resource
                 TextColumn::make('id')
                     ->sortable(),
                 TextColumn::make('titulo'),
-                TextColumn::make('categoria'),
                 TextColumn::make('data'),
             ])
             ->filters([

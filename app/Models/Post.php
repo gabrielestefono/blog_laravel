@@ -17,11 +17,17 @@ class Post extends Model
         "imagem_pequena",
         "categoria",
         "data",
-        'user_id'
+        'user_id',
+        'categoria_id'
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class);
     }
 }

@@ -25,7 +25,8 @@ export function Layout({ children }) {
     }, [light]);
 
 
-    function lightMode() {
+    function lightMode(e) {
+        e.preventDefault();
         setLight(!light);
     }
 

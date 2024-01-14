@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AutorController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BuscaController;
+use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SobreController;
@@ -23,3 +25,5 @@ Route::get('/blog', [BlogController::class,'index'])->name('blog');
 Route::get('/post', [PostController::class,'index'])->name('post');
 Route::get('/sobre', [SobreController::class,'index'])->name('sobre');
 Route::get('/autor', [AutorController::class,'index'])->name('autor');
+Route::get('/busca', [BuscaController::class,'index'])->name('busca');
+Route::get('/categoria', [CategoriaController::class,'index'])->name('categoria');
