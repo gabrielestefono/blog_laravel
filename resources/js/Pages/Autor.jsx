@@ -4,22 +4,14 @@ import UltimasPostagens from "@/Components/blog/UltimasPostagens";
 import { Layout } from "@/Layouts/Layout";
 import propTypes from 'prop-types';
 
-export default function Sobre(props){
-    Sobre.propTypes = {
-        users: propTypes.array,
+export default function Autor(props){
+    Autor.propTypes = {
+        user: propTypes.array,
         posts: propTypes.array
     };
-
-    let user = () => {
-        return props.users.map((user) => {
-            return (
-                <BannerAutor key={user.id} user={user}/>
-            )
-        })
-    }
     return (
         <Layout>
-            {user()}
+            <BannerAutor key={props.user.id} user={props.user}/>
             <UltimasPostagens posts={props.posts}/>
             <Ads/>
         </Layout>

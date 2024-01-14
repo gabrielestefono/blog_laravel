@@ -9,9 +9,11 @@ export default function UltimasPostagens({light, posts}){
         posts: PropTypes.array
     }
 
+    const currentPath = window.location.pathname;
+
     let postsProntos = (posts)=>{
         return posts.map((post, index) => {
-            if(currentPath !== '/sobre'){
+            if(currentPath !== '/sobre' && currentPath !== '/autor'){
                 if(index !== 0){
                     return (
                         <PostGridCard key={post.id} post={post} light={light}/>
@@ -34,7 +36,6 @@ export default function UltimasPostagens({light, posts}){
             }
         }
     }
-    const currentPath = window.location.pathname;
     return (
         <section className={light ? estilo.ultimasPostagensLight : estilo.ultimasPostagensDark}>
             <div>

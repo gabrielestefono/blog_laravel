@@ -13,7 +13,7 @@ export default function BannerAutor({light, user}) {
                     <div>
                         <img src={user.imagem_grande != undefined ? `./storage/${user.imagem_grande}` : "./example/profilehd.png"}  alt="Imagem do autor"/>
                         <div>
-                            <h2>{user.name}</h2>
+                            <a href={`/autor?id=${user.id}`}><h2>{user.name}</h2></a>
                             <p>{user.profissao ?? 'Profissão não informada'}</p>
                         </div>
                     </div>

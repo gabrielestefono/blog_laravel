@@ -37,12 +37,16 @@
                 }
 
                 > div{
-                    > h2{
-                        font-family: $work;
-                        font-size: 1.25rem;
-                        color: $dark;
-                        line-height: 1.75rem;
-                        font-weight: 500;
+                    > a{
+                        text-decoration: none;
+
+                        > h2{
+                            font-family: $work;
+                            font-size: 1.25rem;
+                            color: $dark;
+                            line-height: 1.75rem;
+                            font-weight: 500;
+                        }
                     }
 
                     >p{
@@ -163,12 +167,16 @@
                 }
 
                 > div{
-                    > h2{
-                        font-family: $work;
-                        font-size: 1.25rem;
-                        color: $light;
-                        line-height: 1.75rem;
-                        font-weight: 500;
+                    > a{
+                        text-decoration: none;
+
+                        > h2{
+                            font-family: $work;
+                            font-size: 1.25rem;
+                            color: $light;
+                            line-height: 1.75rem;
+                            font-weight: 500;
+                        }
                     }
 
                     >p{

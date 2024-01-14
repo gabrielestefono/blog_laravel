@@ -23,7 +23,7 @@ export default function PostGridCard({light, post}) {
                 <div>
                     <div>
                         <img src={post.user.imagem_pequena != undefined ? `./storage/${post.user.imagem_pequena}` : "./example/profile.png"} alt="Alt imagem" />
-                        <span>{post.user.name}</span>
+                        {/* <span>{post.user.name}</span> */}
                     </div>
                     <span>{format(new Date(post.data), 'dd \'de\' MMMM \'de\' yyyy', { locale: ptBR })}</span>
                 </div>

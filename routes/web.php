@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AutorController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
@@ -21,3 +22,4 @@ Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/blog', [BlogController::class,'index'])->name('blog');
 Route::get('/post', [PostController::class,'index'])->name('post');
 Route::get('/sobre', [SobreController::class,'index'])->name('sobre');
+Route::get('/autor', [AutorController::class,'index'])->name('autor');
