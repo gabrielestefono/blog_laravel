@@ -1,33 +1,38 @@
 import estilo from './BannerAutor.module.scss';
+import propTypes from 'prop-types';
 
-export default function BannerAutor({light}) {
+export default function BannerAutor({light, user}) {
+    BannerAutor.propTypes = {
+        light: propTypes.bool,
+        user: propTypes.object
+    };
     return (
         <div className={light ? estilo.bannerAutorLight : estilo.bannerAutorDark}>
             <div>
                 <div>
                     <div>
-                        <img src="./example/profilehd.png" alt="Profile"/>
+                        <img src={user.imagem_grande != undefined ? `./storage/${user.imagem_grande}` : "./example/profilehd.png"}  alt="Imagem do autor"/>
                         <div>
-                            <h2>Jonathan Doe</h2>
-                            <p>Collaborator & Editor</p>
+                            <h2>{user.name}</h2>
+                            <p>{user.profissao ?? 'Profissão não informada'}</p>
                         </div>
                     </div>
                     <div>
-                        <p>Meet Jonathan Doe, a passionate writer and blogger with a love for technology and travel. Jonathan holds a degree in Computer Science and has spent years working in the tech industry, gaining a deep understanding of the impact technology has on our lives.</p>
+                        <p>{user.sobre ?? "Usuário sem bibliografia"}</p>
                     </div>
                     <div>
-                        <button>
+                        {user.facebook != undefined ? <a href={user.facebook}>
                             <div className={estilo.item1}></div>
-                        </button>
-                        <button>
+                        </a> : ''}
+                        {user.twitter != undefined ? <a href={user.twitter}>
                             <div className={estilo.item2}></div>
-                        </button>
-                        <button>
+                        </a> : ''}
+                        {user.instagram != undefined ? <a href={user.instagram}>
                             <div className={estilo.item3}></div>
-                        </button>
-                        <button>
+                        </a> : ''}
+                        {user.youtube != undefined ? <a href={user.youtube}>
                             <div className={estilo.item4}></div>
-                        </button>
+                        </a> : ''}
                     </div>
                 </div>
             </div>

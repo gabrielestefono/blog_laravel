@@ -11,7 +11,17 @@ class SobreController extends Controller
 {
     public function index(){
         $posts = Post::with(['user:id,name,imagem_pequena,imagem_grande'])->latest()->limit(12)->get();
-        $users = User::select('id', 'name', /* sobre, profissão, facebook, instagram, twitter, youtube*/)->get();
+        $users = User::select(
+            'id',
+            'name',
+            'sobre',
+            'profissao',
+            'facebook',
+            'instagram',
+            'twitter',
+            'youtube',
+            'imagem_grande'
+            )->get();
 
         return Inertia::render('Sobre',[
             'posts'=> $posts,
