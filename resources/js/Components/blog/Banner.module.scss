@@ -53,12 +53,16 @@ section.bannerLight{
                 > div:nth-child(2){
                     margin-top: 1rem;
 
-                    > p{
-                        color: $dark;
-                        font-family: $work;
-                        font-size: 2.25rem;
-                        line-height: 2.5rem;
-                        font-weight: 600;
+                    > a{
+                        text-decoration: none;
+
+                        > p{
+                            color: $dark;
+                            font-family: $work;
+                            font-size: 2.25rem;
+                            line-height: 2.5rem;
+                            font-weight: 600;
+                        }
                     }
                 }
 
@@ -154,12 +158,16 @@ section.bannerDark{
                 > div:nth-child(2){
                     margin-top: 1rem;
 
-                    > p{
-                        color: $light;
-                        font-family: $work;
-                        font-size: 2.25rem;
-                        line-height: 2.5rem;
-                        font-weight: 600;
+                    > a{
+                        text-decoration: none;
+
+                        > p{
+                            color: $light;
+                            font-family: $work;
+                            font-size: 2.25rem;
+                            line-height: 2.5rem;
+                            font-weight: 600;
+                        }
                     }
                 }
 

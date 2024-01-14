@@ -18,7 +18,7 @@ export default function Header({lightMode, light}){
                 <ul>
                     <a href="/"><li>Início</li></a>
                     <a href="/blog"><li>Blog</li></a>
-                    <a href="/autor"><li>Sobre</li></a>
+                    <a href="/sobre"><li>Sobre</li></a>
                 </ul>
                 <div>
                     <div>

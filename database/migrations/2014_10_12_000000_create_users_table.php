@@ -15,6 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('imagem_pequena')->nullable();
+            $table->string('sobre')->nullable();
+            $table->string('profissao')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('youtube')->nullable();
             $table->string('imagem_grande')->nullable();
             $table->string('password');
             $table->string('email')->unique();

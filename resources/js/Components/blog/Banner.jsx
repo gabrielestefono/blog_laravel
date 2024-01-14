@@ -1,24 +1,24 @@
 import estilo from './Banner.module.scss';
 
-export default function Banner({light}){
+export default function Banner({light, post}){
     return (
         <section className={light ? estilo.bannerLight : estilo.bannerDark}>
             <div>
-                <img src="./example/image.png" alt="Banner"/>
+                <img src={`./storage/${post.imagem_destaque}`} alt="Banner"/>
                 <div>
                     <div>
                         <div>
-                            <h2>Tecnologia</h2>
+                            <h2>{post.categoria}</h2>
                         </div>
                         <div>
-                            <p>The Impact of Technology on the Workplace: How Technology is Changing</p>
+                            <a href={`/post?id=${post.id}`}><p>{post.titulo}</p></a>
                         </div>
                         <div>
                             <div>
-                                <img src="./example/profile.png" alt="Perfil"/>
-                                <span>Jason Francisco</span>
+                                <img src={post.user.imagem_pequena ?? "./example/profile.png"} alt="Perfil"/>
+                                <span>{post.user.name}</span>
                             </div>
-                            <span>August 20, 2022</span>
+                            <span>{post.data}</span>
                         </div>
                     </div>
                 </div>

@@ -3,11 +3,11 @@ import Ads from "@/Components/blog/Ads";
 import UltimasPostagens from "@/Components/blog/UltimasPostagens";
 import { Layout } from "@/Layouts/Layout";
 
-export default function Autor(){
+export default function Autor(props){
     return (
         <Layout>
             <BannerAutor/>
-            <UltimasPostagens/>
+            <UltimasPostagens posts={props.posts}/>
             <Ads/>
         </Layout>
     )
