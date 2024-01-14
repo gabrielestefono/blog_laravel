@@ -26,7 +26,7 @@ export default function Banner({light, post}){
                             <div>
                                 <div>
                                     <img src={post.user.imagem_pequena != undefined ? `./storage/${post.user.imagem_pequena}` : "./example/profile.png"} alt="Perfil"/>
-                                    <span>{post.user.name}</span>
+                                    <a href={`/autor?id=${post.user.id}`}>{post.user.name}</a>
                                 </div>
                                 <span>{format(new Date(post.data), 'dd \'de\' MMMM \'de\' yyyy', { locale: ptBR })}</span>
                             </div>

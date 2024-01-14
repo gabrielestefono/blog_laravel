@@ -1,0 +1,51 @@
+@import '../../Style/variaveis.scss';
+
+.contentDark{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    > div{
+        width: 50rem;
+
+        > div{
+            > h2{
+                color: $light;
+                font-family: $work;
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+                font-weight: 600;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            > p{
+                margin-top: 1rem;
+                color: $cinza10;
+                font-family: $work;
+                font-size: 1.25rem;
+                line-height: 2rem;
+            }
+
+            > figure{
+                width: 100%;
+                margin-top: 1rem;
+
+                >a{
+                    text-decoration: none;
+                    color: transparent;
+                }
+            }
+
+            h3{
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                color: $light;
+                font-family: $work;
+                font-size: 1.5rem;
+                line-height: 1.75rem;
+                font-weight: 600;
+            }
+        }
+    }
+}

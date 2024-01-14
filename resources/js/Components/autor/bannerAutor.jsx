@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 export default function BannerAutor({light, user}) {
     BannerAutor.propTypes = {
         light: propTypes.bool,
-        user: propTypes.object
+        user: propTypes.object,
     };
     return (
         <div className={light ? estilo.bannerAutorLight : estilo.bannerAutorDark}>

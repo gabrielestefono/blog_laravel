@@ -10,7 +10,7 @@ class PostController extends Controller
 {
     public function index(Request $request){
         $id = $request->query("id");
-        $post = Post::with(['user:id,name'])->findOrFail($id);
+        $post = Post::with(['user:id,name,imagem_pequena'])->findOrFail($id);
         return Inertia::render("Post", [
             "post"=> $post
         ]);

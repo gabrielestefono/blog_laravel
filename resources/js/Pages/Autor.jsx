@@ -6,7 +6,7 @@ import propTypes from 'prop-types';
 
 export default function Autor(props){
     Autor.propTypes = {
-        user: propTypes.array,
+        user: propTypes.object,
         posts: propTypes.array
     };
     return (
