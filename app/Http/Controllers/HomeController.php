@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -13,5 +14,10 @@ class HomeController extends Controller
         return Inertia::render('Inicio',[
             'posts'=> $posts
         ]);
+    }
+
+    public function categorias(){
+        $categorias = Categoria::all();
+        return response()->json($categorias);
     }
 }

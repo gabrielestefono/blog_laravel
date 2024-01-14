@@ -11,13 +11,15 @@ class CategoriaController extends Controller
     public function index(Request $request)
     {
         $request->validate([
-            'categoria' => 'required'
+            'nome' => 'required'
         ]);
 
         $posts = Post::with(['user:id,name,imagem_pequena,imagem_grande'])
-        ->where('categoria', 'like', '%' . $request->categoria . '%')
-        ->get();
-        return Inertia::render('Busca', [
+            ->whereHas('categoria', function ($query) use ($request) {
+                $query->where('slug', $request->nome);
+            })
+            ->get();
+        return Inertia::render('Categoria', [
             'posts' => $posts
         ]);
     }

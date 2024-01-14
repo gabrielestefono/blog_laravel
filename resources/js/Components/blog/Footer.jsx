@@ -1,6 +1,19 @@
 import estilo from './Footer.module.scss';
+import propTypes from 'prop-types';
+import {useState, useEffect} from 'react';
 
 export default function Footer({light}) {
+    Footer.propTypes = {
+        light: propTypes.bool
+    };
+
+    const [categorias, setCategorias] = useState([]);
+
+    useEffect(() => {
+        fetch('/api/categorias')
+            .then(response => response.json())
+            .then(data => setCategorias(data));
+    });
     return (
         <footer className={light ? estilo.footerLight : estilo.footerDark}>
             <div>
@@ -13,33 +26,28 @@ export default function Footer({light}) {
                     </div>
                     <div>
                         <div>
-                            <h3>Quick Link</h3>
+                            <h3>Links Rápidos</h3>
                             <ul>
                                 <a href="/"><li>Início</li></a>
-                                <a href="/"><li>About</li></a>
-                                <a href="/"><li>Blog</li></a>
-                                <a href="/"><li>Arquived</li></a>
-                                <a href="/"><li>Author</li></a>
-                                <a href="/"><li>Contact</li></a>
+                                <a href="/sobre"><li>Sobre</li></a>
+                                <a href="/blog"><li>Blog</li></a>
                             </ul>
                         </div>
                         <div>
-                            <h3>Category</h3>
+                            <h3>Categorias</h3>
                             <ul>
-                                <a href="/"><li>Lifestyle</li></a>
-                                <a href="/"><li>Technology</li></a>
-                                <a href="/"><li>Travel</li></a>
-                                <a href="/"><li>Business</li></a>
-                                <a href="/"><li>Economy</li></a>
-                                <a href="/"><li>Sports</li></a>
+                                {categorias.map((categoria, index) => (
+                                    <a key={categoria.id} href={`/categoria?nome=${categoria.slug}`}><li>{categoria.nome}</li></a>
+                                ))
+                                }
                             </ul>
                         </div>
                     </div>
                     <div>
                         <form>
                             <div>
-                                <h3>Weekly Newsletter</h3>
-                                <p>Get blog articles and offers via email</p>
+                                <h3>Noticias Semanais</h3>
+                                <p>Receba nossas novidades por email</p>
                                 <label>
                                     <input type="text" placeholder='Seu email'/>
                                     <div></div>
