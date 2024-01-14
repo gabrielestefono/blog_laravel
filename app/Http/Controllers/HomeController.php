@@ -10,7 +10,8 @@ use Inertia\Inertia;
 class HomeController extends Controller
 {
     public function index(){
-        $posts = Post::with(['user:id,name,imagem_pequena'])->latest()->limit(12)->get();
+        $posts = Post::with(['user:id,name,imagem_pequena', 'categoria'])
+        ->latest()->limit(12)->get();
         return Inertia::render('Inicio',[
             'posts'=> $posts
         ]);

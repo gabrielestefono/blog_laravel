@@ -14,7 +14,7 @@ class BuscaController extends Controller
             'titulo' => 'required'
         ]);
 
-        $posts = Post::with(['user:id,name,imagem_pequena,imagem_grande'])
+        $posts = Post::with(['user:id,name,imagem_pequena,imagem_grande', 'categoria'])
         ->where('titulo', 'like', '%' . $request->titulo . '%')
         ->get();
         return Inertia::render('Busca', [

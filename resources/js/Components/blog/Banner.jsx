@@ -7,6 +7,7 @@ export default function Banner({light, post}){
     Banner.propTypes = {
         light: PropTypes.bool,
     };
+    console.log(post);
     if(post != undefined){
         Banner.propTypes = {
             post: PropTypes.object.isRequired,
@@ -14,13 +15,13 @@ export default function Banner({light, post}){
         return (
             <section className={light ? estilo.bannerLight : estilo.bannerDark}>
                 <div>
-                    <img src={`./storage/${post.imagem_destaque}`} alt="Banner"/>
+                     <img src={`./storage/${post.imagem_destaque}`} alt="Banner"/>
                     <div>
                         <div>
                             <div>
-                                <h2>{post.categoria}</h2>
+                                <h2>{post.categoria.nome}</h2>
                             </div>
-                            <div>
+                           <div>
                                 <a href={`/post?id=${post.id}`}><p>{post.titulo}</p></a>
                             </div>
                             <div>

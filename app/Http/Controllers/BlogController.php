@@ -9,7 +9,7 @@ use Inertia\Inertia;
 class BlogController extends Controller
 {
     public function index(){
-        $posts = Post::with(['user:id,name,imagem_pequena,imagem_grande'])->latest()->limit(12)->get();
+        $posts = Post::with(['user:id,name,imagem_pequena,imagem_grande', 'categoria'])->latest()->limit(12)->get();
         return Inertia::render('Blog',[
             'posts'=> $posts
         ]);

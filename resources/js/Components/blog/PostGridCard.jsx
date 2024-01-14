@@ -15,7 +15,7 @@ export default function PostGridCard({light, post}) {
                     <img src={`./storage/${post.imagem_pequena}`} alt="Alt imagem" />
                 </div>
                 <div>
-                    <h3>{post.categoria}</h3>
+                    <h3>{post.categoria.nome}</h3>
                 </div>
                 <div>
                     <a href={`/post?id=${post.id}`}><h2>{post.titulo}</h2></a>

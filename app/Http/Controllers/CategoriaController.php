@@ -14,7 +14,7 @@ class CategoriaController extends Controller
             'nome' => 'required'
         ]);
 
-        $posts = Post::with(['user:id,name,imagem_pequena,imagem_grande'])
+        $posts = Post::with(['user:id,name,imagem_pequena,imagem_grande', 'categoria'])
             ->whereHas('categoria', function ($query) use ($request) {
                 $query->where('slug', $request->nome);
             })

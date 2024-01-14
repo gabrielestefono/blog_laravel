@@ -18,7 +18,7 @@ export default function BannerBlog({light, post}) {
                     <div>
                         <div>
                             <div>
-                                <h2>{post.categoria}</h2>
+                                <h2>{post.categoria.nome}</h2>
                             </div>
                             <div>
                                 <a href={`/post?id=${post.id}`}><p>{post.titulo}</p></a>

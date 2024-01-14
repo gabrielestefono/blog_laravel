@@ -27,7 +27,7 @@ class AutorController extends Controller
             'imagem_grande'
             )->findOrfail($request->id);
 
-            $posts = Post::with(['user:id,name,imagem_pequena,imagem_grande'])
+            $posts = Post::with(['user:id,name,imagem_pequena,imagem_grande', 'categoria'])
                 ->where('user_id', $request->id)->latest()->limit(12)->get();
 
         return Inertia::render('Autor', [
