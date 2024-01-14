@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->string('titulo');
             $table->text('corpo');
             $table->string('imagem_destaque');
@@ -21,11 +22,8 @@ return new class extends Migration
             $table->string('categoria');
             $table->date('data');
             $table->timestamps();
-        });
 
-        Schema::table('users', function(Blueprint $table){
-            $table->unsignedBigInteger('postagem_id')->nullable()->after('id');
-            $table->foreign('postagem_id')->references('id')->on('posts');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

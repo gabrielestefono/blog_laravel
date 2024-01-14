@@ -17,6 +17,7 @@ class Post extends Model
         "imagem_pequena",
         "categoria",
         "data",
+        'user_id'
     ];
 
     public function user()
