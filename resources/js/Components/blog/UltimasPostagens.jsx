@@ -1,7 +1,14 @@
 import PostGridCard from './PostGridCard';
 import estilo from './UltimasPostagens.module.scss';
+import PropTypes from 'prop-types';
 
 export default function UltimasPostagens({light, posts}){
+    // Validando os tipos das props
+    UltimasPostagens.propTypes = {
+        light: PropTypes.bool,
+        posts: PropTypes.array
+    }
+
     let postsProntos = (posts)=>{
         return posts.map((post, index) => {
             if(currentPath !== '/autor'){
@@ -17,6 +24,16 @@ export default function UltimasPostagens({light, posts}){
             }
         })
     }
+
+    let mostrarBotao = ()=>{
+        if(posts.length > 11){
+            if(currentPath !== "/"){
+                return (<a href="/rotaRequisiçãoMais"><button>Ver Mais</button></a>)
+            }else{
+                return (<a href="/blog"><button>Ver Todos</button></a>)
+            }
+        }
+    }
     const currentPath = window.location.pathname;
     return (
         <section className={light ? estilo.ultimasPostagensLight : estilo.ultimasPostagensDark}>
@@ -28,7 +45,7 @@ export default function UltimasPostagens({light, posts}){
                     {postsProntos(posts)}
                 </div>
                 <div>
-                    {currentPath !== "/" ? <a href="/rotaRequisiçãoMais"><button>Ver Mais</button></a> : <a href="/blog"><button>Ver Todos</button></a>}
+                    {mostrarBotao()}
                 </div>
             </div>
         </section>
