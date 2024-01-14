@@ -9,6 +9,7 @@ Escolhi um blog de um layout que encontrei na comunidade Figma:
 ![image](https://github.com/gabrielestefono/blog_laravel/assets/104292192/7b971759-3272-4385-8aae-bc4b92fd7e55)
 
 Segue o link para desenvolvedores que quiserem:
+
 https://www.figma.com/community/file/1216616090937021365/free-blog-template-modern-creative-design
 
 ## Backend: Tecnologias Utilizadas:
